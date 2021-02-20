@@ -1,0 +1,25 @@
+#+TITLE: awesome-backup
+* CLI
+
+| Name      | Type                      | Encr. | Dedup. | Compr. | Snap. | Backend                                     | License               | Compatibility         | Notes                                                 | Language |
+|-----------+---------------------------+-------+--------+--------+-------+---------------------------------------------+-----------------------+-----------------------+-------------------------------------------------------+----------|
+| [[https://github.com/borgbackup/borg][borg]]      | CLI                       | Yes   | Yes    | Yes    | Yes   | Local/SSH                                   | BSD-3                 | Linux, MacOS          | borgmatic is a neat tool to automate your borg backup | C/Python |
+| [[https://github.com/rclone/rclone][rclone]]    | CLI/Web UI (experimental) | Yes   | Yes    | No     | No    | Local/SSH/Multiple cloud providers          | MIT                   | Linux, MacOS, Docker  | "rsync for cloud storage"                             | Go       |
+| [[https://github.com/restic/restic][restic]]    | CLI                       | Yes   | Yes    | No     | Yes   | Local/Multiple cloud providers (via rclone) | BSD-2                 | Linux, Docker         |                                                       | Go       |
+| [[https://github.com/gilbertchen/duplicacy][duplicacy]] | CLI/Web UI                | Yes   | Yes    | Yes    | Yes   | Local/Multiple cloud providers              | Free for personal use | Windows, Linux, MacOS |                                                       | Go       |
+| [[https://github.com/duplicati/duplicati][duplicati]] | CLI/Web UI                | Yes   | Yes    | Yes    | Yes   | Local/SSH/Multiple cloud providers          | LGPL-2.1              | Windows, Linux, MacOS |                                                       | C#       |
+| [[https://github.com/WayneD/rsync][rsync]]     | CLI                       | No    | No     | No     | No    | Local/SSH                                   | GPL-3.0               | Linux, MacOS          |                                                       | C        |
+
+- Encr./Encryption : The backup will be encrypted so that the other side won't have access to any of the data.
+- Compr./Compression : The backup will be compressed. Its total size will be smaller or equivalent in size than its original.
+- Dedup./Deduplication : The backup won't copy a file if it already exists somewhere in the backup.
+- Snap./Snapshots : The backup will be able to restore in a previous backup.
+
+* GUI
+* Backend
+
+| Name      | Protocol | Price            |
+|-----------+----------+------------------|
+| Scaleway  | S3       | First 75 Gb free |
+| Backblaze |          |                  |
+| [[https://www.rsync.net/][rsync.net]] | SSH      | 2.5 cts/GB/month |
