@@ -1,5 +1,5 @@
 #+TITLE: awesome-backup
-* CLI
+* FOSS
 
 | Name      | Type                      | Encr. | Dedup. | Compr. | Snap. | Backend                                     | License               | Compatibility         | Notes                                                 | Language |
 |-----------+---------------------------+-------+--------+--------+-------+---------------------------------------------+-----------------------+-----------------------+-------------------------------------------------------+----------|
@@ -15,7 +15,12 @@
 - Dedup./Deduplication : The backup won't copy a file if it already exists somewhere in the backup.
 - Snap./Snapshots : The backup will be able to restore in a previous backup.
 
-* GUI
+* Proprietary
+
+| Name         | Notes                           |
+|--------------+---------------------------------|
+| Hyper Backup | only available for Synology NAS |
+| Time Machine | only for Apple devices          |
 * Backend
 
 | Name      | Protocol | Price            |
